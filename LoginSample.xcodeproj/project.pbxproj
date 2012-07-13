@@ -16,7 +16,7 @@
 		0297515C15AFAC8D006E51AA /* LSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0297515B15AFAC8D006E51AA /* LSViewController.m */; };
 		0297515F15AFAC8D006E51AA /* LSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0297515D15AFAC8D006E51AA /* LSViewController.xib */; };
 		0297517015AFB551006E51AA /* LSAuthenticateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0297516E15AFB551006E51AA /* LSAuthenticateViewController.m */; };
-		0297517115AFB551006E51AA /* LSAuthenticatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0297516F15AFB551006E51AA /* LSAuthenticatViewController.xib */; };
+		0297517115AFB551006E51AA /* LSAuthenticateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0297516F15AFB551006E51AA /* LSAuthenticateViewController.xib */; };
 		297516415AFAC8D006E51AC /* LSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 297516415AFAC8D006E51AB /* LSUser.m */; };
 		297516415AFAC8D006E51AF /* LSAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = 297516415AFAC8D006E51AE /* LSAuthenticator.m */; };
 		297516415AFAC8D006E51B2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 297516415AFAC8D006E51B1 /* .gitignore */; };
@@ -38,7 +38,7 @@
 		0297515E15AFAC8D006E51AA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LSViewController.xib; sourceTree = "<group>"; };
 		0297516D15AFB551006E51AA /* LSAuthenticateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSAuthenticateViewController.h; sourceTree = "<group>"; };
 		0297516E15AFB551006E51AA /* LSAuthenticateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSAuthenticateViewController.m; sourceTree = "<group>"; };
-		0297516F15AFB551006E51AA /* LSAuthenticatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSAuthenticatViewController.xib; sourceTree = "<group>"; };
+		0297516F15AFB551006E51AA /* LSAuthenticateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSAuthenticateViewController.xib; sourceTree = "<group>"; };
 		297516415AFAC8D006E51AB /* LSUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSUser.m; sourceTree = "<group>"; };
 		297516415AFAC8D006E51AD /* LSUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSUser.h; sourceTree = "<group>"; };
 		297516415AFAC8D006E51AE /* LSAuthenticator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSAuthenticator.m; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 				0297514F15AFAC8D006E51AA /* Supporting Files */,
 				0297516D15AFB551006E51AA /* LSAuthenticateViewController.h */,
 				0297516E15AFB551006E51AA /* LSAuthenticateViewController.m */,
-				0297516F15AFB551006E51AA /* LSAuthenticatViewController.xib */,
+				0297516F15AFB551006E51AA /* LSAuthenticateViewController.xib */,
 			);
 			path = LoginSample;
 			sourceTree = "<group>";
@@ -172,7 +172,7 @@
 			files = (
 				0297515315AFAC8D006E51AA /* InfoPlist.strings in Resources */,
 				0297515F15AFAC8D006E51AA /* LSViewController.xib in Resources */,
-				0297517115AFB551006E51AA /* LSAuthenticatViewController.xib in Resources */,
+				0297517115AFB551006E51AA /* LSAuthenticateViewController.xib in Resources */,
 				297516415AFAC8D006E51B2 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -42,7 +42,7 @@ the call to presentModalViewController will not work in viewDidLoad.
 
     if (self.user == nil){
         NSLog(@"No user, authenticating");
-        LSAuthenticateViewController *authController = [[LSAuthenticateViewController alloc] initWithNibName:@"LSAuthenticatViewController" bundle:nil];
+        LSAuthenticateViewController *authController = [[LSAuthenticateViewController alloc] initWithNibName:@"LSAuthenticateViewController" bundle:nil];
         authController.delegate = self;
 
         [self presentModalViewController:authController animated:YES];
@@ -72,7 +72,7 @@ the call to presentModalViewController will not work in viewDidLoad.
     self.user = nil;
 
     // Show the authentication controller since we no longer have a user
-    LSAuthenticateViewController *authController = [[LSAuthenticateViewController alloc] initWithNibName:@"LSAuthenticatViewController" bundle:nil];
+    LSAuthenticateViewController *authController = [[LSAuthenticateViewController alloc] initWithNibName:@"LSAuthenticateViewController" bundle:nil];
     authController.delegate = self;
     [self presentModalViewController:authController animated:YES];
     [authController release];    
