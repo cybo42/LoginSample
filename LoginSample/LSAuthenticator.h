@@ -10,6 +10,8 @@
 @class LSUser;
 
 
+// this is a singleton class or in Objective-C a SharedInstance.
+// Just a dumb class to hold users and validate their password.
 @interface LSAuthenticator : NSObject;
 
 @property(nonatomic, retain) NSDictionary *users;

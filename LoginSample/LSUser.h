@@ -7,6 +7,9 @@
 
 #import <Foundation/Foundation.h>
 
+/*
+Simple object that just holds a username and password
+ */
 
 @interface LSUser : NSObject
 

@@ -12,6 +12,7 @@
 
 @interface LSViewController : UIViewController
 
+// Properties to hold authenticated user
 @property (retain, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (retain, nonatomic) LSUser *user;
 

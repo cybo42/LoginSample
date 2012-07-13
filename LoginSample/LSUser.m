@@ -17,6 +17,7 @@
 @synthesize username = _username;
 @synthesize password = _password;
 
+// init method that takes both username & password
 - (id)initWithUsername:(NSString *)username password:(NSString *)password {
     self = [super init];
     if (self) {

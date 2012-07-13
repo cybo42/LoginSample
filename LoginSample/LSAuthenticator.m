@@ -16,6 +16,8 @@ static LSAuthenticator *_sharedAuthenticator;
 }
 @synthesize users = _users;
 
+// This is the init method that will initialize LSAuthenticator the very first time.
+// It also pre-populates itself with some users.
 +(LSAuthenticator *)sharedAuthenticator {
     @synchronized (self) {
         if (_sharedAuthenticator == nil){
@@ -39,6 +41,7 @@ static LSAuthenticator *_sharedAuthenticator;
 }
 
 - (LSUser *)authenticateUsername:(NSString *)username withPassword :(NSString *)password {
+    // Lookup user in the internal Dictionary (Map) then see if the password provide matches. If it does return the user, if not nil
     LSUser *testUser = [self.users objectForKey:username];
     if ([testUser.password isEqualToString:password]){
         return testUser;
