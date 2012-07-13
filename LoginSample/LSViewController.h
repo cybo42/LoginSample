@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class LSUser;
+
 @interface LSViewController : UIViewController
+
+@property (retain, nonatomic) IBOutlet UILabel *usernameLabel;
+@property (retain, nonatomic) LSUser *user;
+
+
+- (IBAction)logoutPressed:(id)sender;
 
 @end
