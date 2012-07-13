@@ -12,7 +12,7 @@ static LSAuthenticator *_sharedAuthenticator;
 
 @implementation LSAuthenticator{
     @private
-    NSDictionary *_users;
+    NSMutableDictionary *_users;
 }
 @synthesize users = _users;
 
@@ -22,18 +22,14 @@ static LSAuthenticator *_sharedAuthenticator;
     @synchronized (self) {
         if (_sharedAuthenticator == nil){
             _sharedAuthenticator = [[self alloc] init];
-            NSMutableDictionary *myUsers = [[NSMutableDictionary alloc] init];
-            LSUser *me = [[LSUser alloc] initWithUsername:@"cybo42@gmail.com" password:@"password123"];
 
-            [myUsers setObject:me forKey:me.username];
-            [me release];
+            NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+            _sharedAuthenticator.users = dict;
+            [dict release];
 
-            LSUser *admin = [[LSUser alloc] initWithUsername:@"admin@example.com" password:@"admin"];
-            [myUsers setObject:admin forKey:admin.username];
-            [admin release];
-
-            _sharedAuthenticator.users = myUsers;
-            [myUsers release];
+            // Populate some users
+            [_sharedAuthenticator addUsername:@"cybo42@gmail.com" withPassword:@"password123"];
+            [_sharedAuthenticator addUsername:@"admin@example.com" withPassword:@"password"];
         }
     }
 
@@ -48,6 +44,16 @@ static LSAuthenticator *_sharedAuthenticator;
     }
 
     return nil;
+}
+
+- (void)addUser:(LSUser *)user {
+    [self.users setObject:user forKey:user.username];
+}
+
+- (void)addUsername:(NSString *)username withPassword:(NSString *)password {
+    LSUser *user = [[LSUser alloc] initWithUsername:username password:password];
+    [self addUser:user];
+    [user release];
 }
 
 

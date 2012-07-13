@@ -14,10 +14,12 @@
 // Just a dumb class to hold users and validate their password.
 @interface LSAuthenticator : NSObject;
 
-@property(nonatomic, retain) NSDictionary *users;
+@property(nonatomic, retain) NSMutableDictionary *users;
 
 
 + (LSAuthenticator *)sharedAuthenticator;
-- (LSUser *)authenticateUsername:(NSString *) username withPassword: (NSString *) password;
+- (LSUser *)authenticateUsername:(NSString *) username withPassword:(NSString *) password;
+- (void) addUser:(LSUser *) user;
+- (void) addUsername:(NSString *) username withPassword:(NSString *) password;
 
 @end
